@@ -111,8 +111,8 @@
 		"list": [{
 			"pagePath": "pages/index/index",
 			"text": "首页",
-			"iconPath": "static/images/quanzi.png",
-			"selectedIconPath": "static/images/quanzi-fill.png"
+			"iconPath": "static/images/home.png",
+			"selectedIconPath": "static/images/home-fill.png"
 		}, {
 			"pagePath": "pages/self/self",
 			"text": "我的",
@@ -124,7 +124,6 @@
 		"loginPage": "uni_modules/uni-id-pages/pages/login/login-withpwd",
 		"needLogin": [
 			"pages/index/index",
-			"pages/edit/edit",
 			"uni_modules/uni-id-pages/pages/userinfo/userinfo"
 		],
 		"resToLogin": true

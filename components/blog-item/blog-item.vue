@@ -63,7 +63,7 @@
 			giveAvatar,
 			//点击更多操作
 			clickMore(){
-				let uid=uniCloud.getCurrentUserInfo().uid
+				let uid = uniCloud.getCurrentUserInfo().uid
 				console.log(this.item.user_id[0]._id, this.uniIDHasRole('admin'), this.uniIDHasRole('webmaster'))
 				if(uid == this.item.user_id[0]._id || this.uniIDHasRole('admin') || this.uniIDHasRole('webmaster')){
 					this.list.forEach(item=>{
@@ -79,13 +79,15 @@
 				let type=e.type;
 				console.log(type);
 				if(type=="del"){
-					this.delFun();
+					this.delFun()
 				} else if (type=="edit") {
 					this.$emit("editEvent", this.item)
 				}
 			},
 			
 			delFun(){
+				console.log('2q3r')
+				this.$emit("delEvent")
 				uni.showLoading({
 					title:"加载中..."
 				})
@@ -96,13 +98,12 @@
 					uni.showToast({
 						title:"删除成功",
 						icon:"none"
-					})	
-					this.$emit("delEvent",true)
+					})
+					this.$emit("delEvent")
 				}).catch(err=>{
 					uni.hideLoading()
 				})
 			},
-
 			//取消弹窗
 			onClose(){
 				this.sheetShow=false
@@ -113,15 +114,6 @@
 					url:"/pages/detail/detail?id="+this.item._id
 				})
 			},
-			
-			
-			//单击图片
-			clickPic(index){
-				uni.previewImage({
-					urls:this.item.picurls,
-					current:index
-				})
-			}
 		}
 	}
 </script>

@@ -11,12 +11,6 @@
 					</view>
 					<view class="text" v-if="hasLogin">
 						<view class="nickname">{{userInfo.nickname||userInfo.username||userInfo.mobile}}</view>
-
-						<view class="year">
-							<uni-dateformat :date="userInfo.register_date"
-								:threshold="[3600,99*365*24*60*60*1000]"></uni-dateformat>
-							注册
-						</view>
 					</view>
 					<view class="text" v-else>
 						<view class="nickname">点击登录</view>
@@ -24,7 +18,7 @@
 
 				</view>
 				<view class="more">
-					<text class="iconfont icon-a-10-you"></text>
+					<text class="iconfont icon-right"></text>
 				</view>
 			</view>
 			<view class="bg">
@@ -40,17 +34,17 @@
 					<view class="item" @click="mySpace">
 						<view class="left"><text class="iconfont icon-a-24-bianji"></text><text class="text">空间管理</text>
 						</view>
-						<view class="right"><text class="iconfont icon-a-10-you"></text></view>
+						<view class="right"><text class="iconfont icon-right"></text></view>
 					</view>
 					<view class="item" @click="myLike">
 						<view class="left"><text class="iconfont icon-a-106-xihuan"></text><text
 								class="text">我的点赞</text></view>
-						<view class="right"><text class="iconfont icon-a-10-you"></text></view>
+						<view class="right"><text class="iconfont icon-right"></text></view>
 					</view>
 					<view class="item">
 						<view class="left"><text class="iconfont icon-a-21-xiugai"></text><text class="text">评论过的</text>
 						</view>
-						<view class="right"><text class="iconfont icon-a-10-you"></text></view>
+						<view class="right"><text class="iconfont icon-right"></text></view>
 					</view>
 				</view> -->
 
@@ -58,20 +52,20 @@
 					<view class="item">
 						<view class="left"><text class="iconfont icon-a-32-wenjian"></text><text class="text">关于</text>
 						</view>
-						<view class="right"><text class="iconfont icon-a-10-you"></text></view>
+						<view class="right"><text class="iconfont icon-right"></text></view>
 					</view>
 					<view class="item" @click="goFeedback">
 						<view class="left"><text class="iconfont icon-a-5-xinxi"></text><text class="text">意见反馈</text>
 						</view>
-						<view class="right"><text class="iconfont icon-a-10-you"></text></view>
+						<view class="right"><text class="iconfont icon-right"></text></view>
 					</view>
 				</view> -->
 
 				<view class="group">
 					<view class="item" @click="logout">
-						<view class="left"><text class="iconfont icon-a-73-tuichu"></text><text class="text">退出登录</text>
+						<view class="left"><text class="iconfont icon-poweroff"></text><text class="text">退出登录</text>
 						</view>
-						<view class="right"><text class="iconfont icon-a-10-you"></text></view>
+						<view class="right"><text class="iconfont icon-right"></text></view>
 					</view>
 				</view>
 			</view>
